@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="math_tycoon_game" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Karl's Math Tycoon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rqJ-Q1-a8L">
+                                <rect key="frame" x="44.666666666666657" y="50" width="325" height="49"/>
+                                <fontDescription key="fontDescription" name="PingFangSC-Semibold" family="PingFang SC" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="75" translatesAutoresizingMaskIntoConstraints="NO" id="pbT-6j-WJl">
+                                <rect key="frame" x="57" y="386" width="300" height="175"/>
+                                <subviews>
+                                    <button opaque="NO" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XPt-3M-xFH">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
+                                        <color key="backgroundColor" red="0.663200146819797" green="0.58962319343503988" blue="0.35723022738230192" alpha="0.52421339897260277" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="6EC-0E-FbY"/>
+                                            <constraint firstAttribute="width" constant="300" id="hyC-Hu-D6c"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                        <state key="normal" title="Addition / Subtraction">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="button_tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RhF-8m-qWt"/>
+                                            <segue destination="qI0-WB-6cj" kind="show" id="Dh9-Vk-dRR">
+                                                <segue key="commit" inheritsFrom="parent" id="k1L-es-e04"/>
+                                                <segue key="preview" inheritsFrom="commit" id="SVr-2P-AC6"/>
+                                            </segue>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="21" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PH4-2i-Ytt">
+                                        <rect key="frame" x="0.0" y="125" width="300" height="50"/>
+                                        <color key="backgroundColor" red="0.87281884519999997" green="0.61498652129999998" blue="0.1658389156" alpha="0.55305543660000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="KyC-kF-fbk"/>
+                                            <constraint firstAttribute="width" constant="300" id="nGl-3q-pUZ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                        <state key="normal" title="Multiplication / Division">
+                                            <color key="titleColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="button_tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZNM-nL-jf1"/>
+                                            <segue destination="qI0-WB-6cj" kind="show" id="ELK-aU-YhG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spend 10 Digits to unlock Multiplication / Division" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rjy-Dt-0vo">
+                                <rect key="frame" x="62.666666666666657" y="571" width="288.66666666666674" height="16"/>
+                                <fontDescription key="fontDescription" name="Thonburi-Light" family="Thonburi" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="22" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2eQ-ET-nj1">
+                                <rect key="frame" x="177" y="597" width="60" height="35"/>
+                                <color key="backgroundColor" red="0.30651054081526968" green="0.68436676830942222" blue="0.85561027238223353" alpha="0.43458369006849318" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="9fQ-7z-3Yn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="17"/>
+                                <state key="normal" title="Unlock">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="button_tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nXH-oX-ufe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="23" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TBA-f0-vgb">
+                                <rect key="frame" x="57" y="511" width="300" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="1hN-GS-NXb"/>
+                                    <constraint firstAttribute="width" constant="300" id="TcE-dE-Wxt"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="button_tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="91u-0p-uwG"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Digits: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mNW-ug-930">
+                                <rect key="frame" x="157" y="99" width="100" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="h5m-rb-VXA"/>
+                                    <constraint firstAttribute="width" constant="100" id="q2y-Qw-F1w"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.81382092729454514" green="0.87780335359010209" blue="0.89468987944162426" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rjy-Dt-0vo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1jE-pA-zHB"/>
+                            <constraint firstItem="TBA-f0-vgb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="B8w-44-ZCv"/>
+                            <constraint firstItem="pbT-6j-WJl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Kag-XM-SI6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pbT-6j-WJl" secondAttribute="bottom" constant="175" id="YLe-N6-GuL"/>
+                            <constraint firstItem="rjy-Dt-0vo" firstAttribute="top" secondItem="TBA-f0-vgb" secondAttribute="bottom" constant="10" id="elf-aR-z4O"/>
+                            <constraint firstItem="2eQ-ET-nj1" firstAttribute="top" secondItem="rjy-Dt-0vo" secondAttribute="bottom" constant="10" id="fKy-gi-wDP"/>
+                            <constraint firstItem="mNW-ug-930" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iMY-Jn-F6h"/>
+                            <constraint firstItem="mNW-ug-930" firstAttribute="top" secondItem="rqJ-Q1-a8L" secondAttribute="bottom" id="jEb-l8-Oku"/>
+                            <constraint firstItem="2eQ-ET-nj1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kZ6-Hf-OoH"/>
+                            <constraint firstItem="rqJ-Q1-a8L" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ldU-UN-raJ"/>
+                            <constraint firstItem="rqJ-Q1-a8L" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="tfN-4H-UQj"/>
+                            <constraint firstItem="rjy-Dt-0vo" firstAttribute="top" secondItem="pbT-6j-WJl" secondAttribute="bottom" constant="10" id="yd0-9c-ySS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="VQ9-ya-0NT"/>
+                    <connections>
+                        <outlet property="button_button" destination="TBA-f0-vgb" id="Qa9-WG-QwI"/>
+                        <outlet property="digits" destination="mNW-ug-930" id="VDx-GY-Fc4"/>
+                        <outlet property="mult_div_button" destination="PH4-2i-Ytt" id="hzr-IE-EfL"/>
+                        <outlet property="spend_informer" destination="rjy-Dt-0vo" id="Pzq-0T-orl"/>
+                        <outlet property="unlock_button" destination="2eQ-ET-nj1" id="JO6-kd-uFy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="101.90217391304348"/>
+        </scene>
+        <!--Calculator Controller-->
+        <scene sceneID="017-r0-4U0">
+            <objects>
+                <viewController storyboardIdentifier="Calculator" id="qI0-WB-6cj" customClass="CalculatorController" customModule="math_tycoon_game" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rtu-7O-lon">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iup-vE-oi3">
+                                <rect key="frame" x="55" y="256" width="304" height="304"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RCi-UZ-6TK">
+                                        <rect key="frame" x="0.0" y="0.0" width="1" height="304"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="1" id="I0l-wG-qzC"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Pg4-Cd-0CR">
+                                        <rect key="frame" x="1" y="0.0" width="100" height="304"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MuU-Yr-m7v">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="1"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="4wr-Sh-aIx"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HSl-6h-E7T">
+                                                <rect key="frame" x="0.0" y="1" width="100" height="100"/>
+                                                <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="8Hi-E6-VFZ"/>
+                                                    <constraint firstAttribute="height" constant="100" id="ycr-I8-g2X"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="35"/>
+                                                <state key="normal" title="7">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="buttons:" destination="qI0-WB-6cj" eventType="touchUpInside" id="vM7-1t-D32"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jwC-uL-a6w">
+                                                <rect key="frame" x="0.0" y="101" width="100" height="1"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="wfH-JR-qem"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fpj-h8-2Ey" userLabel="4">
+                                                <rect key="frame" x="0.0" y="102" width="100" height="100"/>
+                                                <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="oVz-Pc-USv"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="35"/>
+                                                <state key="normal" title="4">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="buttons:" destination="qI0-WB-6cj" eventType="touchUpInside" id="uwc-I7-GTh"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HPd-ya-l05">
+                                                <rect key="frame" x="0.0" y="202" width="100" height="1"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="thf-ho-3hR"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SRR-5m-Ogc">
+                                                <rect key="frame" x="0.0" y="203" width="100" height="100"/>
+                                                <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="tnd-uw-ipf"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="35"/>
+                                                <state key="normal" title="1">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="buttons:" destination="qI0-WB-6cj" eventType="touchUpInside" id="tG5-8R-7n3"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tfq-0Q-b4T">
+                                                <rect key="frame" x="0.0" y="303" width="100" height="1"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="sOL-h2-m5i"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="Q9g-vX-eYx"/>
+                                            <constraint firstAttribute="height" constant="304" id="eJd-iF-ICi"/>
+                                        </constraints>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2NW-H1-njE">
+                                        <rect key="frame" x="101" y="0.0" width="1" height="304"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="1" id="ygc-tV-9Uf"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="e47-7C-XYR">
+                                        <rect key="frame" x="102" y="0.0" width="100" height="304"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Czg-9o-Lcg">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="1"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="dBL-yN-j6O"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QKc-ZB-PSd">
+                                                <rect key="frame" x="0.0" y="1" width="100" height="100"/>
+                                                <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="Agf-vn-KV8"/>
+                                                    <constraint firstAttribute="height" constant="100" id="yM5-r9-Tcj"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="35"/>
+                                                <state key="normal" title="8">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="buttons:" destination="qI0-WB-6cj" eventType="touchUpInside" id="k92-8P-km8"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LsJ-BI-bLQ">
+                                                <rect key="frame" x="0.0" y="101" width="100" height="1"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="bmc-LQ-BGS"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xm5-d5-zgH">
+                                                <rect key="frame" x="0.0" y="102" width="100" height="100"/>
+                                                <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="klL-Zl-RWH"/>
+                                                    <constraint firstAttribute="height" constant="100" id="qcz-qu-58j"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="35"/>
+                                                <state key="normal" title="5">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="buttons:" destination="qI0-WB-6cj" eventType="touchUpInside" id="JWR-Bk-FS5"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fhg-CY-M2s">
+                                                <rect key="frame" x="0.0" y="202" width="100" height="1"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="DK3-72-mDQ"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R7E-Yt-26u">
+                                                <rect key="frame" x="0.0" y="203" width="100" height="100"/>
+                                                <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="7dS-mU-EJy"/>
+                                                    <constraint firstAttribute="height" constant="100" id="dRa-an-Moz"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="35"/>
+                                                <state key="normal" title="2">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="buttons:" destination="qI0-WB-6cj" eventType="touchUpInside" id="82a-RA-epz"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AP3-AU-Wkb">
+                                                <rect key="frame" x="0.0" y="303" width="100" height="1"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="eG2-un-cTA"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="ADM-G9-Cxd"/>
+                                            <constraint firstAttribute="height" constant="304" id="zcV-cy-CQG"/>
+                                        </constraints>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PwK-tL-Df0">
+                                        <rect key="frame" x="202" y="0.0" width="1" height="304"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="1" id="R5g-rC-B7e"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6SK-sp-aGp">
+                                        <rect key="frame" x="203" y="0.0" width="100" height="304"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6hA-vq-yTQ">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="1"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="zA2-kY-dq0"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ng-nO-hX9">
+                                                <rect key="frame" x="0.0" y="1" width="100" height="100"/>
+                                                <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="1DK-TT-Eth"/>
+                                                    <constraint firstAttribute="height" constant="100" id="U4e-Bm-I2B"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="35"/>
+                                                <state key="normal" title="9">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="buttons:" destination="qI0-WB-6cj" eventType="touchUpInside" id="7Jn-Fn-FEH"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dCw-BV-VXQ">
+                                                <rect key="frame" x="0.0" y="101" width="100" height="1"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="ltE-Ef-Buh"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PHY-oM-rKj">
+                                                <rect key="frame" x="0.0" y="102" width="100" height="100"/>
+                                                <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="G43-K8-MAh"/>
+                                                    <constraint firstAttribute="height" constant="100" id="gy5-mL-Iwk"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="35"/>
+                                                <state key="normal" title="6">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="buttons:" destination="qI0-WB-6cj" eventType="touchUpInside" id="vCj-v0-TqL"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jBC-pN-L3w">
+                                                <rect key="frame" x="0.0" y="202" width="100" height="1"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="DHW-gD-XMv"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O7S-0S-wYn">
+                                                <rect key="frame" x="0.0" y="203" width="100" height="100"/>
+                                                <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="p6W-LV-ejK"/>
+                                                    <constraint firstAttribute="width" constant="100" id="ruD-cS-Qny"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="35"/>
+                                                <state key="normal" title="3">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="buttons:" destination="qI0-WB-6cj" eventType="touchUpInside" id="0Xq-c5-FK1"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UeP-Bd-MFO">
+                                                <rect key="frame" x="0.0" y="303" width="100" height="1"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="s3n-sZ-HEM"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="304" id="Jwv-V6-ziv"/>
+                                            <constraint firstAttribute="width" constant="100" id="jI3-eV-onT"/>
+                                        </constraints>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FlI-F3-mlf">
+                                        <rect key="frame" x="303" y="0.0" width="1" height="304"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="1" id="ku8-8t-w6V"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="304" id="4D8-hB-cdl"/>
+                                    <constraint firstAttribute="width" constant="304" id="jP6-bc-xdU"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TTK-Gb-giW">
+                                <rect key="frame" x="56.666666666666657" y="560" width="151" height="85"/>
+                                <color key="backgroundColor" red="0.53937315925728857" green="0.53937315925728857" blue="0.53937315925728857" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="151" id="Fck-hP-Ikq"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="85" id="QQg-dq-VNI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="35"/>
+                                <state key="normal" title="0">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttons:" destination="qI0-WB-6cj" eventType="touchUpInside" id="yUI-ff-hk5"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="30" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" text="2 + 2 =" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pk9-LR-jBt">
+                                <rect key="frame" x="133.66666666666669" y="29.999999999999996" width="146.66666666666669" height="52.666666666666657"/>
+                                <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oF8-vA-Zyx" userLabel="Clear">
+                                <rect key="frame" x="57" y="151" width="300" height="100"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="FaL-uO-ILb"/>
+                                    <constraint firstAttribute="width" constant="300" id="ape-QY-NZK"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="buttons:" destination="qI0-WB-6cj" eventType="touchUpInside" id="rSm-Sb-F1n"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5rh-x2-OxG">
+                                <rect key="frame" x="77" y="191" width="260" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="i6I-s7-Ie5"/>
+                                    <constraint firstAttribute="width" constant="260" id="l6M-6p-QkB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Rv-QG-tyi">
+                                <rect key="frame" x="208.66666666666663" y="560" width="150" height="85"/>
+                                <color key="backgroundColor" red="0.83185279187817263" green="0.48702407547435661" blue="0.0060586732652796339" alpha="0.63712007705479456" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Bcx-TL-lrJ"/>
+                                    <constraint firstAttribute="height" constant="85" id="sMc-DI-adM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="25"/>
+                                <state key="normal" title="Enter">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttons:" destination="qI0-WB-6cj" eventType="touchUpInside" id="D97-JT-Pd6"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Digits: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DGg-ly-lIj">
+                                <rect key="frame" x="172.66666666666666" y="1" width="68.666666666666657" height="22.333333333333332"/>
+                                <fontDescription key="fontDescription" name="Thonburi-Light" family="Thonburi" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.8138209273" green="0.87780335359999995" blue="0.8946898794" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Iup-vE-oi3" firstAttribute="top" secondItem="oF8-vA-Zyx" secondAttribute="bottom" constant="5" id="2fU-DC-IeX"/>
+                            <constraint firstItem="Pk9-LR-jBt" firstAttribute="centerX" secondItem="rtu-7O-lon" secondAttribute="centerX" id="58R-9V-EO2"/>
+                            <constraint firstItem="Iup-vE-oi3" firstAttribute="centerX" secondItem="rtu-7O-lon" secondAttribute="centerX" id="64c-lq-7Ex"/>
+                            <constraint firstItem="DGg-ly-lIj" firstAttribute="centerX" secondItem="rtu-7O-lon" secondAttribute="centerX" id="BVo-f1-Gi1"/>
+                            <constraint firstItem="TTK-Gb-giW" firstAttribute="centerX" secondItem="rtu-7O-lon" secondAttribute="centerX" constant="-75" id="FQW-Xa-Xv0"/>
+                            <constraint firstItem="5rh-x2-OxG" firstAttribute="centerX" secondItem="rtu-7O-lon" secondAttribute="centerX" id="Fph-3Z-2uM"/>
+                            <constraint firstItem="DGg-ly-lIj" firstAttribute="top" secondItem="kpM-sx-LNK" secondAttribute="top" constant="1" id="Kfl-Zr-JIJ"/>
+                            <constraint firstItem="oF8-vA-Zyx" firstAttribute="leading" secondItem="kpM-sx-LNK" secondAttribute="leading" constant="57" id="QHd-5F-3HW"/>
+                            <constraint firstItem="0Rv-QG-tyi" firstAttribute="top" secondItem="Iup-vE-oi3" secondAttribute="bottom" id="Wc3-0k-vsa"/>
+                            <constraint firstItem="kpM-sx-LNK" firstAttribute="trailing" secondItem="oF8-vA-Zyx" secondAttribute="trailing" constant="57" id="b4Y-2Y-aCu"/>
+                            <constraint firstItem="TTK-Gb-giW" firstAttribute="top" secondItem="Iup-vE-oi3" secondAttribute="bottom" id="d6r-8Q-y5T"/>
+                            <constraint firstItem="Pk9-LR-jBt" firstAttribute="top" secondItem="kpM-sx-LNK" secondAttribute="top" constant="30" id="h5p-Nh-VNW"/>
+                            <constraint firstItem="0Rv-QG-tyi" firstAttribute="leading" secondItem="TTK-Gb-giW" secondAttribute="trailing" constant="1" id="pzq-3c-smr"/>
+                            <constraint firstItem="Iup-vE-oi3" firstAttribute="centerY" secondItem="rtu-7O-lon" secondAttribute="centerY" constant="50" id="sM4-kA-gw3"/>
+                            <constraint firstItem="Iup-vE-oi3" firstAttribute="top" secondItem="5rh-x2-OxG" secondAttribute="bottom" constant="15" id="w52-wL-TgB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kpM-sx-LNK"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8aL-mc-dqC"/>
+                    <connections>
+                        <outlet property="digits_2" destination="DGg-ly-lIj" id="NY1-OB-vv4"/>
+                        <outlet property="input" destination="5rh-x2-OxG" id="dqD-m2-cfi"/>
+                        <outlet property="problem" destination="Pk9-LR-jBt" id="Vhb-nf-NJT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yqT-eq-b9m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="755.70652173913049"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Dh9-Vk-dRR"/>
+    </inferredMetricsTieBreakers>
+</document>
